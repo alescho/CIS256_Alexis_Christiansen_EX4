@@ -17,4 +17,18 @@ def game():
     print('Play guess the word!')
 
     while attempts > 0 and '_' in display: 
-        print
+        print(display)
+        guess = input('Guess a letter in the word: ')
+
+        if guess in word_selection:
+            for i, letter in word_selection
+                if letter == guess: 
+                    display[i] = guess
+
+        else: 
+            attempts -= 1
+
+    if '_' not in display:
+        print('You guessed the word right: {word_selection}')
+    else: 
+        print('Sorry the word was: {word_selection}')
