@@ -16,18 +16,22 @@ def game():
     #printing game name for user
     print('Play guess the word!')
 
+    #loop for playing game
     while attempts > 0 and '_' in display: 
         print(display)
         guess = input('Guess a letter in the word: ')
 
+        #if statement for guesses
         if guess in word_selection:
             for i, letter in word_selection
                 if letter == guess: 
                     display[i] = guess
 
+        #statement for if guess is wrong
         else: 
             attempts -= 1
 
+    #statement for winning or losing game
     if '_' not in display:
         print('You guessed the word right: {word_selection}')
     else: 
